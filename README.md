@@ -44,6 +44,8 @@ Si todo salio a la perfeccion, nuestra terminal nos avisara que la aplicacion se
 
 ![deploy_laravel](https://user-images.githubusercontent.com/12062735/55941169-4eea1180-5c07-11e9-913f-e80bdbd91f79.gif)
 
+![ingresando al sitio](https://user-images.githubusercontent.com/12062735/55943395-27e20e80-5c0c-11e9-8d5a-4aa08911cc22.gif)
+
 ## 5) Conexion a base de datos
 Teniendo nuestra base de datos funcionando, podremos configurar dentro de nuestro proyecto el archivo '.env'. Dentro del mismo archivo nos encontraremos cada una de las propiedades necesarias para la conexion a base de datos. Se pueden configurar sin ningun problema, con la condicion de que el usuario a configurar dentro de la base de datos tenga privilegios necesarios para creacion de tablas y poder realizar select, update, insert y delete en las tablas que se crearan a continuacion.
 

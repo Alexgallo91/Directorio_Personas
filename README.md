@@ -32,7 +32,7 @@ Ejecutamos XAMPP en nuestro ambiente e iniciamos el server Apache y la base de d
 
 ![activar_apache_mysql](https://user-images.githubusercontent.com/12062735/55940841-873d2000-5c06-11e9-9745-1a785428f5e7.gif)
 
-## 4) Desplegar projecto con Laravel
+## 4) Desplegar proyecto con Laravel
 
 Nos dirijimos a nuestra carpeta que copiamos en 'htdoct' desde nuestra terminal de lineas de comando. Se ejecuta el siguiente comando
 
@@ -43,3 +43,43 @@ php artisan serve
 Si todo salio a la perfeccion, nuestra terminal nos avisara que la aplicacion se estara ejecutando en nuestro localhost, en el puerto 8000
 
 ![deploy_laravel](https://user-images.githubusercontent.com/12062735/55941169-4eea1180-5c07-11e9-913f-e80bdbd91f79.gif)
+
+## 5) Conexion a base de datos
+Teniendo nuestra base de datos funcionando, podremos configurar dentro de nuestro proyecto el archivo '.env'. Dentro del mismo archivo nos encontraremos cada una de las propiedades necesarias para la conexion a base de datos. Se pueden configurar sin ningun problema, con la condicion de que el usuario a configurar dentro de la base de datos tenga privilegios necesarios para creacion de tablas y poder realizar select, update, insert y delete en las tablas que se crearan a continuacion.
+
+![show_env](https://user-images.githubusercontent.com/12062735/55941944-ea2fb680-5c08-11e9-8c9a-1a8c28c0f6bd.gif)
+
+## 6) Creacion de base de datos
+Una vez que tengamos conexion a MySQL, crearemos una nueva base de datos con el siguiente Query:
+
+```
+create database 'libreta_contactos';
+```
+
+Es importante que la bd tenga por nombre 'libreta_contactos'
+
+![creacion_libreta_contactos](https://user-images.githubusercontent.com/12062735/55942861-f7e63b80-5c0a-11e9-8134-b7d3a094c146.gif)
+
+## 7) Migrar tablas desde el proyecto
+
+Dentro del repositorio encontraremos las definiciones de las tablas (DDL) en el archivo 'Script_DB_Libreta_Contactos.sql'. Se puede realizar la creacion de las tablas ejecutando el archivo sql dentro de nuestra base de datos.
+
+De igual manera, aprovechando la facilidad y herramientas que nos brinda laravel, con el siguiente comando se ejecutaran las migraciones que se tienen creadas dentro del proyecto
+
+![creacion_migraciones](https://user-images.githubusercontent.com/12062735/55943093-7f33af00-5c0b-11e9-9a1e-73a3803f0a21.gif)
+
+```
+php artisan migrate
+```
+
+Este comando toma las migraciones que esten dentro del proyecto y creara la estructura que debe tener cada una de las tablas en nuestra base de datos. A continuacion se muestra el diagrama de ER de nuestra base de datos
+
+![Diagrama_ER_Libreta_Contactos](https://user-images.githubusercontent.com/12062735/55943195-bb670f80-5c0b-11e9-83a3-73dc1242f9db.png)
+
+## Finalizacion
+
+Listo, si todo salio sin problemas, podremos ingresar al aplicativo desde nuestro navegador y poder registrar, actualizar, consultar o elimnar nuestros contactos dentro del sistema de libreta de contactos
+
+
+
+
